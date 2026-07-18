@@ -3,412 +3,412 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saida Vali Shaik | Product Consultant</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+<title>Saida Shaik — Business Analyst · Product Consultant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+  :root{
+    --ink:#0B1220;
+    --panel:#111A2B;
+    --panel-2:#16233A;
+    --line:#26344C;
+    --paper:#E9E7DE;
+    --paper-dim:#B9BEC9;
+    --slate:#7C8AA0;
+    --amber:#E8A33D;
+    --green:#4FA184;
+    --red:#D9695F;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--amber);color:var(--ink);}
+  a{color:inherit;}
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-scroll-behavior:smooth;
-}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  .display{font-family:'Space Grotesk',sans-serif;}
 
-body{
-background:#0A0F1C;
-color:white;
-}
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px;}
 
-section{
-padding:100px 10%;
-}
+  /* ---------- Top bar ---------- */
+  .topbar{
+    border-bottom:1px solid var(--line);
+    position:sticky;top:0;
+    background:rgba(11,18,32,0.9);
+    backdrop-filter:blur(8px);
+    z-index:50;
+  }
+  .topbar .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    height:56px;
+  }
+  .brand{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.02em;color:var(--paper-dim);}
+  .brand b{color:var(--amber);}
+  nav{display:flex;gap:22px;font-size:13px;font-family:'JetBrains Mono',monospace;}
+  nav a{text-decoration:none;color:var(--slate);transition:color .15s;}
+  nav a:hover{color:var(--amber);}
 
-.navbar{
-position:fixed;
-top:0;
-width:100%;
-padding:20px 10%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(10,15,28,.9);
-backdrop-filter:blur(15px);
-z-index:1000;
-}
+  /* ---------- Hero: "the ticket" ---------- */
+  .hero{padding:64px 0 40px;}
+  .ticket{
+    border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .ticket-head{
+    display:flex;align-items:center;gap:10px;
+    padding:14px 20px;
+    border-bottom:1px solid var(--line);
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;
+    color:var(--slate);
+  }
+  .id{color:var(--paper-dim);}
+  .dot{width:6px;height:6px;border-radius:50%;background:var(--slate);}
+  .status-chip{
+    margin-left:auto;
+    display:inline-flex;align-items:center;gap:6px;
+    padding:4px 10px;border-radius:20px;
+    border:1px solid rgba(232,163,61,0.4);
+    background:rgba(232,163,61,0.08);
+    color:var(--amber);
+    font-size:11.5px;
+  }
+  .status-chip::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--amber);}
 
-.logo{
-font-size:1.4rem;
-font-weight:800;
-color:#7C3AED;
-}
+  .ticket-body{padding:36px 32px 32px;}
+  .ticket-title{
+    font-size:clamp(32px,5vw,50px);
+    line-height:1.05;
+    margin:0 0 10px;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+  .ticket-title .cursor{color:var(--amber);}
+  .ticket-sub{
+    font-size:17px;color:var(--paper-dim);max-width:560px;line-height:1.55;margin:0 0 26px;
+  }
+  .ticket-sub b{color:var(--paper);font-weight:500;}
 
-.nav-links{
-display:flex;
-gap:25px;
-}
+  .field-row{display:flex;flex-wrap:wrap;gap:28px 40px;margin-top:26px;}
+  .field{min-width:120px;}
+  .field label{
+    display:block;font-family:'JetBrains Mono',monospace;font-size:10.5px;
+    letter-spacing:0.08em;text-transform:uppercase;color:var(--slate);margin-bottom:6px;
+  }
+  .field .val{font-size:14px;color:var(--paper);font-weight:500;}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+  .tag{
+    font-family:'JetBrains Mono',monospace;font-size:11px;
+    padding:3px 9px;border-radius:5px;
+    border:1px solid var(--line);color:var(--paper-dim);
+  }
 
-.nav-links a{
-color:white;
-text-decoration:none;
-font-weight:500;
-}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;}
+  .btn{
+    font-family:'JetBrains Mono',monospace;font-size:13px;
+    padding:11px 18px;border-radius:6px;
+    text-decoration:none;
+    display:inline-flex;align-items:center;gap:8px;
+  }
+  .btn-primary{background:var(--amber);color:var(--ink);font-weight:600;}
+  .btn-ghost{border:1px solid var(--line);color:var(--paper-dim);}
+  .btn-ghost:hover{border-color:var(--amber);color:var(--amber);}
 
-.hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-flex-direction:column;
-}
+  /* ---------- Section shell ---------- */
+  section{padding:56px 0;border-bottom:1px solid var(--line);}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:30px;}
+  .sec-num{font-family:'JetBrains Mono',monospace;color:var(--amber);font-size:13px;}
+  .sec-title{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:600;margin:0;}
+  .sec-note{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--slate);margin-left:auto;}
 
-.hero h1{
-font-size:4rem;
-margin-bottom:20px;
-}
+  /* ---------- Backlog (experience) ---------- */
+  .card{
+    border:1px solid var(--line);border-radius:8px;background:var(--panel);
+    padding:22px 24px;margin-bottom:16px;
+  }
+  .card-top{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;}
+  .card-id{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--slate);white-space:nowrap;padding-top:3px;}
+  .card-heading{flex:1;min-width:200px;}
+  .card-role{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;margin:0 0 3px;}
+  .card-org{font-size:13px;color:var(--paper-dim);}
+  .card-org .sep{color:var(--slate);margin:0 6px;}
+  .badge{
+    font-family:'JetBrains Mono',monospace;font-size:10.5px;padding:3px 9px;border-radius:20px;
+    white-space:nowrap;
+  }
+  .badge-live{background:rgba(79,161,132,0.12);color:var(--green);border:1px solid rgba(79,161,132,0.35);}
+  .badge-closed{background:rgba(124,138,160,0.12);color:var(--paper-dim);border:1px solid var(--line);}
+  .card-list{margin:16px 0 0;padding-left:18px;color:var(--paper-dim);font-size:14px;line-height:1.65;}
+  .card-list li{margin-bottom:6px;}
+  .card-list li::marker{color:var(--amber);}
+  .card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;}
 
-.hero span{
-color:#7C3AED;
-}
+  /* ---------- Skills grid ---------- */
+  .skill-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+  .skill-cell{background:var(--panel);padding:16px 16px;}
+  .skill-cell .k{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--slate);text-transform:uppercase;letter-spacing:0.06em;display:block;margin-bottom:6px;}
+  .skill-cell .v{font-size:14px;color:var(--paper);font-weight:500;}
 
-.hero p{
-max-width:700px;
-font-size:1.2rem;
-line-height:1.8;
-color:#cbd5e1;
-}
+  /* ---------- Projects (VISRAI) ---------- */
+  .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .proj{
+    border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:22px;
+    display:flex;flex-direction:column;height:100%;
+  }
+  .proj-name{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;margin:0 0 8px;}
+  .proj-desc{font-size:13.5px;color:var(--paper-dim);line-height:1.6;flex:1;margin:0 0 14px;}
+  .proj-status{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--amber);}
 
-.btns{
-margin-top:30px;
-display:flex;
-gap:20px;
-}
+  /* ---------- Education / footer ---------- */
+  .edu-row{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px;padding:18px 0;border-bottom:1px solid var(--line);}
+  .edu-row:last-child{border-bottom:none;}
+  .edu-left b{display:block;font-size:15px;margin-bottom:3px;}
+  .edu-left span{font-size:13px;color:var(--paper-dim);}
+  .edu-right{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--slate);white-space:nowrap;}
 
-.btn{
-padding:14px 28px;
-border:none;
-border-radius:12px;
-cursor:pointer;
-font-weight:600;
-text-decoration:none;
-}
+  footer{padding:40px 0 60px;text-align:center;}
+  footer .sig{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--slate);}
+  footer .sig b{color:var(--amber);}
 
-.primary{
-background:#7C3AED;
-color:white;
-}
+  @media (max-width:640px){
+    .proj-grid{grid-template-columns:1fr;}
+    nav{display:none;}
+    .ticket-body{padding:28px 20px;}
+    .field-row{gap:20px;}
+  }
 
-.secondary{
-border:1px solid #7C3AED;
-color:white;
-background:transparent;
-}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .cursor{animation:none !important;}
+  }
 
-.section-title{
-font-size:2.5rem;
-margin-bottom:40px;
-text-align:center;
-}
-
-.about{
-display:grid;
-grid-template-columns:1fr 2fr;
-gap:40px;
-align-items:center;
-}
-
-.profile{
-width:250px;
-height:250px;
-border-radius:50%;
-background:#7C3AED;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:5rem;
-font-weight:700;
-margin:auto;
-}
-
-.card-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-.card{
-background:#111827;
-padding:25px;
-border-radius:20px;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card h3{
-margin-bottom:15px;
-color:#7C3AED;
-}
-
-.timeline{
-max-width:900px;
-margin:auto;
-}
-
-.timeline-item{
-background:#111827;
-padding:25px;
-border-left:4px solid #7C3AED;
-margin-bottom:20px;
-border-radius:12px;
-}
-
-.skills{
-display:flex;
-flex-wrap:wrap;
-gap:15px;
-justify-content:center;
-}
-
-.skill{
-padding:12px 20px;
-background:#111827;
-border-radius:30px;
-}
-
-.contact{
-text-align:center;
-}
-
-.contact p{
-margin:15px 0;
-}
-
-footer{
-text-align:center;
-padding:30px;
-border-top:1px solid #1f2937;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:2.5rem;
-}
-
-.about{
-grid-template-columns:1fr;
-text-align:center;
-}
-
-.nav-links{
-display:none;
-}
-
-}
-
+  .cursor{animation:blink 1.1s step-end infinite;}
+  @keyframes blink{50%{opacity:0;}}
 </style>
 </head>
-
 <body>
 
-<nav class="navbar">
-<div class="logo">SVS</div>
-
-<div class="nav-links">
-<a href="#about">About</a>
-<a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
-
-<section class="hero">
-
-<h1>Hi, I'm <span>Saida Vali Shaik</span></h1>
-
-<p>
-Product Consultant & Business Analyst with 3+ years of experience
-delivering enterprise solutions across Airline, EdTech, Energy and
-Enterprise SaaS domains.
-</p>
-
-<div class="btns">
-<a href="#projects" class="btn primary">View Projects</a>
-<a href="Saida_Resume.pdf" class="btn secondary">Download Resume</a>
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand">saida<b>.</b>shaik <span style="color:var(--slate)">/ portfolio</span></div>
+    <nav>
+      <a href="#backlog">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </div>
 
-</section>
+<div class="wrap">
 
-<section id="about">
+  <!-- HERO -->
+  <section class="hero" style="border-bottom:none;padding-bottom:0;">
+    <div class="ticket">
+      <div class="ticket-head">
+        <span class="id">#BA-2026</span>
+        <span class="dot"></span>
+        <span>Assigned to <b style="color:var(--paper-dim)">Saida Shaik</b></span>
+        <span class="status-chip">In Progress — Relocating to UK</span>
+      </div>
+      <div class="ticket-body">
+        <h1 class="ticket-title">Business Analyst,<br>Product Consultant<span class="cursor">_</span></h1>
+        <p class="ticket-sub">
+          <b>3+ years</b> turning ambiguous requirements into shipped features across
+          Pharma, Airline, EdTech and Energy. Currently supporting enterprise pharma clients
+          on the EPIQ LearnIQ platform — requirements, stakeholder management, UAT, and release
+          coordination via Azure DevOps.
+        </p>
 
-<h2 class="section-title">About Me</h2>
+        <div class="field-row">
+          <div class="field">
+            <label>Location</label>
+            <div class="val">Hyderabad, India</div>
+          </div>
+          <div class="field">
+            <label>Target</label>
+            <div class="val">UK — BA / PMO / Scrum Master</div>
+          </div>
+          <div class="field">
+            <label>Status</label>
+            <div class="val">PG Project Management, UEA — visa pending</div>
+          </div>
+          <div class="field" style="flex:1;">
+            <label>Domains</label>
+            <div class="tags">
+              <span class="tag">Pharma</span>
+              <span class="tag">Airline</span>
+              <span class="tag">EdTech</span>
+              <span class="tag">Energy</span>
+            </div>
+          </div>
+        </div>
 
-<div class="about">
+        <div class="cta-row">
+          <a class="btn btn-primary" href="mailto:saidacareer02@gmail.com">Email me →</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/saidashaik2030" target="_blank">LinkedIn</a>
+          <a class="btn btn-ghost" href="#projects">View VISRAI projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="profile">
-S
+  <!-- BACKLOG / EXPERIENCE -->
+  <section id="backlog">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2 class="sec-title">Backlog — Work History</h2>
+      <span class="sec-note">2 closed sprints</span>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <span class="card-id">#0002</span>
+        <div class="card-heading">
+          <div class="card-role">Product Consultant</div>
+          <div class="card-org">Caliber Technologies <span class="sep">·</span> EPIQ LearnIQ (Pharma) <span class="sep">·</span> Nov 2025 – Present</div>
+        </div>
+        <span class="badge badge-live">active</span>
+      </div>
+      <ul class="card-list">
+        <li>Primary liaison between pharmaceutical clients and dev teams across implementation and post-launch support.</li>
+        <li>Gather requirements, prioritize defects and enhancements via Azure DevOps, track issues to resolution.</li>
+        <li>Support sprint planning, backlog refinement, release coordination and tracking across cross-functional Agile teams.</li>
+        <li>Own UAT execution, validate production fixes, and configure demo environments (IIS, SSMS) for client demos.</li>
+        <li>Deliver product demos, user training, and release walkthroughs to drive adoption.</li>
+      </ul>
+      <div class="card-tags">
+        <span class="tag">Azure DevOps</span><span class="tag">UAT</span><span class="tag">Release Mgmt</span><span class="tag">Stakeholder Mgmt</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <span class="card-id">#0001</span>
+        <div class="card-heading">
+          <div class="card-role">Business Analyst</div>
+          <div class="card-org">Inspire Infosol Pvt. Ltd. <span class="sep">·</span> Airline · EdTech · Energy <span class="sep">·</span> Jan 2023 – Jul 2025</div>
+        </div>
+        <span class="badge badge-closed">closed</span>
+      </div>
+      <ul class="card-list">
+        <li>Owned business analysis and Agile delivery coordination end-to-end across three domains.</li>
+        <li>Authored BRDs, FRDs, SRS, user stories and acceptance criteria aligning stakeholders and dev teams.</li>
+        <li>Led sprint planning, backlog refinement, sprint reviews and stand-ups; managed Jira boards and release planning.</li>
+        <li>Ran UAT and regression cycles, coordinating defect validation with QA and development.</li>
+        <li>Supported governance, risk tracking and issue escalation alongside Project Managers.</li>
+      </ul>
+      <div class="card-tags">
+        <span class="tag">BRD/FRD/SRS</span><span class="tag">Jira</span><span class="tag">SQL</span><span class="tag">Regression Testing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2 class="sec-title">Skill Matrix</h2>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-cell"><span class="k">Delivery</span><span class="v">Agile & Waterfall</span></div>
+      <div class="skill-cell"><span class="k">Delivery</span><span class="v">SDLC</span></div>
+      <div class="skill-cell"><span class="k">Delivery</span><span class="v">Scrum Ceremonies</span></div>
+      <div class="skill-cell"><span class="k">Analysis</span><span class="v">Requirements Gathering</span></div>
+      <div class="skill-cell"><span class="k">Analysis</span><span class="v">BRD / FRD / SRS</span></div>
+      <div class="skill-cell"><span class="k">Analysis</span><span class="v">UAT & Regression</span></div>
+      <div class="skill-cell"><span class="k">Tools</span><span class="v">Azure DevOps</span></div>
+      <div class="skill-cell"><span class="k">Tools</span><span class="v">Jira</span></div>
+      <div class="skill-cell"><span class="k">Tools</span><span class="v">SQL</span></div>
+      <div class="skill-cell"><span class="k">Tools</span><span class="v">Power BI</span></div>
+      <div class="skill-cell"><span class="k">People</span><span class="v">Stakeholder Mgmt</span></div>
+      <div class="skill-cell"><span class="k">People</span><span class="v">Release Coordination</span></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <h2 class="sec-title">VISRAI — Independent Product Portfolio</h2>
+      <span class="sec-note">est. 2025</span>
+    </div>
+    <p style="color:var(--paper-dim);font-size:14px;line-height:1.7;margin-top:-10px;margin-bottom:24px;max-width:640px;">
+      Founded to run full BA and product-ownership cycles independently — BRDs, roadmaps,
+      user stories, and wireframes treated as live proof of end-to-end capability.
+    </p>
+    <div class="proj-grid">
+      <div class="proj">
+        <div>
+          <div class="proj-name">Sprint Forge</div>
+          <p class="proj-desc">Agile delivery tooling built as a hands-on case study in sprint planning and backlog discipline.</p>
+        </div>
+        <span class="proj-status">● in build</span>
+      </div>
+      <div class="proj">
+        <div>
+          <div class="proj-name">Cartel</div>
+          <p class="proj-desc">Product initiative exploring requirement-to-release workflows outside a client engagement.</p>
+        </div>
+        <span class="proj-status">● in build</span>
+      </div>
+      <div class="proj">
+        <div>
+          <div class="proj-name">Textile Industry Platform</div>
+          <p class="proj-desc">Full BA documentation suite (BRD, roadmap, wireframes) built for a fictional manufacturing client, Meridian Textile Mills.</p>
+        </div>
+        <span class="proj-status">● documented</span>
+      </div>
+      <div class="proj">
+        <div>
+          <div class="proj-name">CA & Legal Connect</div>
+          <p class="proj-desc">Legal-services discovery concept, currently in early conversations with potential partners.</p>
+        </div>
+        <span class="proj-status">● early discussions</span>
+      </div>
+    </div>
+    <div class="cta-row" style="margin-top:22px;">
+      <a class="btn btn-ghost" href="https://saida1928.github.io/visrai/" target="_blank">Full VISRAI site →</a>
+      <a class="btn btn-ghost" href="https://saida1928.github.io/whitefang/" target="_blank">White Fang tribute site →</a>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <h2 class="sec-title">Education</h2>
+    </div>
+    <div class="edu-row">
+      <div class="edu-left">
+        <b>B.Sc. Mathematics, Electronics & Computer Science</b>
+        <span>VDA Degree College, affiliated to Andhra University</span>
+      </div>
+      <div class="edu-right">2023</div>
+    </div>
+    <div class="edu-row">
+      <div class="edu-left">
+        <b>Postgraduate — Project Management</b>
+        <span>University of East Anglia (UEA), United Kingdom</span>
+      </div>
+      <div class="edu-right">visa pending</div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p class="sig">saidacareer02@gmail.com <span style="opacity:0.5">/</span> +91 7569784511 <span style="opacity:0.5">/</span> <b>#status:</b> open to work — UK</p>
+  </footer>
+
 </div>
-
-<div>
-
-<p style="line-height:2;color:#cbd5e1;">
-I am a Product Consultant and Business Analyst passionate about
-transforming business requirements into successful digital products.
-My experience spans stakeholder management, Agile delivery,
-requirement gathering, product improvement, UAT, analytics,
-and client engagement.
-
-My goal is to grow into Product Management and lead products
-that create measurable business impact.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="experience">
-
-<h2 class="section-title">Experience</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-<h3>Product Consultant</h3>
-<h4>Caliber Technologies | Nov 2025 – Present</h4>
-
-<p>
-Managing enterprise clients on LearnIQ within the EPIQ Platform,
-handling issue analysis, Azure DevOps tracking, product demos,
-release support and stakeholder communication.
-</p>
-
-</div>
-
-<div class="timeline-item">
-<h3>Business Analyst & QA Analyst</h3>
-<h4>Inspire Info Solutions | Jan 2023 – Jul 2025</h4>
-
-<p>
-Requirement gathering, BRD/FRD preparation,
-Agile ceremonies, Jira management, UAT execution,
-SQL analysis and stakeholder collaboration.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="projects">
-
-<h2 class="section-title">Featured Projects</h2>
-
-<div class="card-grid">
-
-<div class="card">
-<h3>Airline Reservation System</h3>
-<p>
-Managed user stories, Agile ceremonies and UAT
-for booking and ticketing workflows.
-</p>
-</div>
-
-<div class="card">
-<h3>Airline Loyalty Platform</h3>
-<p>
-Handled discount logic requirements,
-backlog grooming and stakeholder management.
-</p>
-</div>
-
-<div class="card">
-<h3>AI Airline Chatbot</h3>
-<p>
-Designed conversational flows and validated
-chatbot responses before production release.
-</p>
-</div>
-
-<div class="card">
-<h3>Career Guidance Platform</h3>
-<p>
-Created dashboards and supported counsellor workflows
-for student engagement and decision making.
-</p>
-</div>
-
-<div class="card">
-<h3>LearnIQ Platform</h3>
-<p>
-Supported enterprise pharmaceutical clients,
-conducted demos and improved platform adoption.
-</p>
-</div>
-
-<div class="card">
-<h3>Solar PV Delivery Project</h3>
-<p>
-Validated delivery models and created
-functional test scenarios.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="skills">
-
-<h2 class="section-title">Skills</h2>
-
-<div class="skills">
-
-<div class="skill">Business Analysis</div>
-<div class="skill">Product Management</div>
-<div class="skill">Jira</div>
-<div class="skill">Azure DevOps</div>
-<div class="skill">Confluence</div>
-<div class="skill">SQL</div>
-<div class="skill">Excel</div>
-<div class="skill">Power BI</div>
-<div class="skill">Tableau</div>
-<div class="skill">Figma</div>
-<div class="skill">Postman</div>
-<div class="skill">Agile Scrum</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2 class="section-title">Contact</h2>
-
-<div class="contact">
-
-<p>📍 Hyderabad, India</p>
-<p>📧 saidashaik1319@gmail.com</p>
-<p>📱 +91 7569784511</p>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 Saida Vali Shaik | Product Consultant Portfolio
-
-</footer>
 
 </body>
 </html>
